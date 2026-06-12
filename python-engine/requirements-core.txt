@@ -1,0 +1,11 @@
+# Minimal deps to run the Python engine (chart indicators + signals).
+# Install with: python -m pip install -r requirements-core.txt
+
+flask>=3.0.0,<4
+python-dotenv>=1.0.0
+numpy>=1.26.0,<2.1.0
+pandas>=2.0.0,<2.3.0
+ta>=0.11.0
+ccxt>=4.0.0
+scikit-learn>=1.3.0,<1.7.0
+websocket-client>=1.6.0

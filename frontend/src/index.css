@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --color-brand-50: #eef9ff;
+  --color-brand-100: #d9f1ff;
+  --color-brand-200: #bce7ff;
+  --color-brand-300: #8ed7ff;
+  --color-brand-400: #59bdff;
+  --color-brand-500: #339dff;
+  --color-brand-600: #1a7df5;
+  --color-brand-700: #1564e1;
+  --color-brand-800: #1852b6;
+  --color-brand-900: #19478f;
+  --color-accent-emerald: #10b981;
+  --color-accent-rose: #f43f5e;
+  --color-surface-900: #0a0e17;
+  --color-surface-800: #0f1524;
+  --color-surface-700: #151d2e;
+  --color-surface-600: #1c2739;
+  --color-surface-500: #243044;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-surface-900 text-slate-100 font-sans;
+  }
+  .light body,
+  html.light body {
+    @apply bg-slate-50 text-slate-900;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+  }
+  .glass-light {
+    @apply bg-white/70 backdrop-blur-xl border border-slate-200/80;
+  }
+  .gradient-text {
+    @apply bg-gradient-to-r from-brand-400 via-cyan-300 to-brand-500 bg-clip-text text-transparent;
+  }
+  .glow-buy {
+    box-shadow: 0 0 30px rgba(16, 185, 129, 0.25), inset 0 1px 0 rgba(255,255,255,0.05);
+  }
+  .glow-sell {
+    box-shadow: 0 0 30px rgba(244, 63, 94, 0.25), inset 0 1px 0 rgba(255,255,255,0.05);
+  }
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    @apply bg-slate-600 rounded-full;
+  }
+}
